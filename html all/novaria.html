@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* Yukarıdaki blok */
+        .logos {
+            height: 70px;
+            width: 200px; 
+            display: flex;
+            justify-content: flex-end;
+            color: white;
+            font-size: 24px;
+            font-family: Arial, sans-serif;
+        }
+        .top-block {
+            height: 100px; /* istediğin yükseklik */
+            background-color: #3498db; /* istediğin renk */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            font-family: Arial, sans-serif;
+        }
+
+        .baslik {
+            color: rgb(238, 0, 255);
+            margin-left: 20px; /* resimle araya boşluk */
+        }
+
+        .sifir {
+            width: 200px;
+            height: 300px;         /* sabit boy */
+            object-fit: cover;     /* resmi kırp */
+            transition: all 0.3s ease;
+        }
+
+        .sifir:hover {
+            width: 230px;
+            height: 330px; /* büyüyünce de orantılı olsun */
+            opacity: 0.8;
+            cursor: pointer;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;   /* dikey ortala */
+            justify-content: center;
+            margin: 30px 0;
+        }
+    </style>
+</head>
+<body style="
+    background-image: url(Site-background-dark.webp); 
+    background-size: cover; 
+    background-position: center; 
+    margin: 0; 
+    padding: 0; 
+    height: 100%;
+    background-attachment: fixed;"
+>
+    <!-- Üst Blok -->
+    <div class="top-block">   
+        <div class="logos">
+                <img src="Site-logo.webp" alt="Site-logo">
+        </div>
+    </div>
+
+    <!-- İçerik -->
+    <div class="container">
+        <a href="novaria.html">
+            <img 
+                class="sifir" 
+                src="buyuculer/0.jpg" 
+                alt="Novaria">
+        </a>
+        <h1 class="baslik">Novaria</h1>
+    </div>
+</body>
+</html>
