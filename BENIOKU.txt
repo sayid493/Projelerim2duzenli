@@ -1,0 +1,2 @@
+start = Yeni Metin Belgesi.html
+project not completed

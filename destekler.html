@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MLBB Karakterleri</title>
+    <style>
+        body::-webkit-scrollbar {
+            width: 0px;  
+            background: transparent;
+        }
+        body {
+            background-image: url("html all/Site-background-dark.webp");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+
+        /* Top Bar */
+        .top-block {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background-color: #1b1556;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            font-family: Arial, sans-serif;
+            padding: 0 20px;
+            z-index: 999;
+        }
+
+        .top-inner {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            justify-content: space-between;
+        }
+
+        .buttons {
+            height: 90px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding-right: 100px;
+            gap: 20px;
+            color: white;
+            font-size: 24px;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+        .buttons:hover {
+            transform: scale(1.1);
+            opacity: 0.8;
+            cursor: pointer;
+        }
+
+        .logos img {
+            height: 70px;
+        }
+
+        .searchh {
+            display: flex;
+            justify-content: center;
+        }
+        .searchh input {
+            padding: 10px;
+            font-size: 16px;
+            width: 250px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        /* Sidebar */
+        #sidebar {
+            position: fixed;
+            top: 0;
+            right: -340px;
+            width: 300px;
+            height: 100%;
+            background-color: #1b1556;
+            color: white;
+            padding: 20px;
+            box-shadow: -2px 0 5px rgba(0,0,0,0.5);
+            transition: right 0.3s ease;
+            z-index: 1000;
+        }
+        #sidebar.active {
+            right: 0;
+        }
+
+        .sidebar-title {
+            font-size: 24px;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .role-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            width: 100%;
+            background-color: #2a206f;
+            padding: 5px 10px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.2s ease, background-color 0.2s ease;
+        }
+        .role-container:hover {
+            background-color: #3b2d9e;
+            transform: scale(1.02);
+        }
+        .role {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+            margin-right: 10px;
+            border-radius: 20%;
+        }
+        .role-text {
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        /* Container for characters */
+        .container {
+            margin-top: 100px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            padding: 30px;
+        }
+
+        .sifir {
+            width: 200px;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+        .sifir:hover {
+            transform: scale(1.1);
+            opacity: 0.8;
+            cursor: pointer;
+        }
+
+        /* Responsive */
+        @media (max-width: 500px) {
+            .sifir {
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="top-block">
+        <div class="top-inner">
+            <div class="buttons">
+               <img id="menuBtn" src="html all/3cızgıı.png" alt="cızgı">
+            </div>
+            <div class="logos">
+                <img src="html all/Site-logo.webp" alt="Site-logo">
+            </div>
+            <div class="searchh">
+                <input type="text" id="search" placeholder="Ara...">
+            </div>
+
+            
+        </div>
+    </div>
+    <div id="sidebar">
+        <h1 class="sidebar-title">Menu Role</h1>
+        <div class="role-container">
+            <a href="Yeni Metin Belgesi.html">
+                <img class="role" src="html all/Başlıksız1_20250925213604.png" alt="all">
+                <span class="role-text">All Lane</span>
+            </a>
+        </div>
+       <div class="role-container">
+            <a href="buyuculer.html">
+                <img class="role" src="html all/mid.png" alt="mid">
+                <span class="role-text">Mid Lane</span>
+            </a>
+        </div>
+        <div class="role-container">
+            <a href="savascilar.html">
+                <img class="role" src="html all/exp.png" alt="exp">
+                <span class="role-text">Exp Lane</span>
+            </a>
+        </div>
+        <div class="role-container">
+            <a href="orman.html">
+                <img class="role" src="html all/orman.png" alt="orman">
+                <span class="role-text">Jungle</span>
+            </a>
+        </div>
+        <div class="role-container">
+            <a href="nisancilar.html">
+                <img class="role" src="html all/altin.png" alt="altin">
+                <span class="role-text">Gold Lane</span>
+            </a>
+        </div>
+        <div class="role-container">
+            <a href="destekler.html">
+                <img class="role" src="html all/dolasim.png" alt="dolasim">
+                <span class="role-text">Roaming</span>
+            </a>
+        </div>
+    </div>
+    <div class="container"> 
+        
+
+        <a href="html all/novaria.html"><img class="sifir" src="html all/destek/1.jpg" alt="angela" data-variant="angela"></a>
+        <a href="html all/novaria.html"><img class="sifir" src="html all/destek/2.jpg" alt="carmila" data-variant="carmila"></a>
+        <a href="html all/novaria.html"><img class="sifir" src="html all/destek/3.png" alt="diggie" data-variant="diggie"></a>
+        <a href="html all/novaria.html"><img class="sifir" src="html all/destek/4.png" alt="estes" data-variant="estes"></a>
+        <a href="html all/novaria.html"><img class="sifir" src="html all/destek/5.jpg" alt="kaja" data-variant="kaja"></a>
+        <a href="html all/novaria.html"><img class="sifir" src="html all/destek/6.jpg" alt="rafelia" data-variant="rafelia"></a>
+        <a href="html all/novaria.html"><img class="sifir" src="html all/destek/7.jpg" alt="faramis" data-variant="faramis"></a>
+        <a href="html all/novaria.html"><img class="sifir" src="html all/destek/8.jpg" alt="floryn" data-variant="floryn"></a>
+        <a href="html all/novaria.html"><img class="sifir" src="html all/destek/9.jpg" alt="lolita" data-variant="lolita"></a>
+        <a href="html all/novaria.html"><img class="sifir" src="html all/destek/10.jpg" alt="mathilda" data-variant="mathilda"></a>
+    
+        <a href="html all/novaria.html"><img class="sifir" src="html all/tanklar/1.jpg" alt="grock" data-variant="grock"></a>
+        <a href="html all/novaria.html"><img class="sifir" src="html all/tanklar/2.jpg" alt="jhonson" data-variant="jhonson"></a>
+        <a href="html all/novaria.html"><img class="sifir" src="html all/tanklar/3.jpg" alt="minathor" data-variant="minathor"></a>
+        <a href="html all/novaria.html"><img class="sifir" src="html all/tanklar/4.jpg" alt="gloo" data-variant="gloo"></a>
+        <a href="html all/novaria.html"><img class="sifir" src="html all/tanklar/5.jpg" alt="gatotkoca" data-variant="gatotkoca"></a>
+        <a href="html all/novaria.html"><img class="sifir" src="html all/tanklar/7.jpg" alt="edith" data-variant="edith"></a>
+        <a href="html all/novaria.html"><img class="sifir" src="html all/tanklar/8.jpg" alt="belerick" data-variant="belerick"></a>
+        <a href="html all/novaria.html"><img class="sifir" src="html all/tanklar/9.jpg" alt="uranus" data-variant="uranus"></a>
+        <a href="html all/novaria.html"><img class="sifir" src="html all/tanklar/10.jpg" alt="franco" data-variant="franco"></a>
+        <a href="html all/novaria.html"><img class="sifir" src="html all/tanklar/11.jpg" alt="akai" data-variant="akai"></a>
+        <a href="html all/novaria.html"><img class="sifir" src="html all/tanklar/12.jpg" alt="kufra" data-variant="kufra"></a>
+        <a href="html all/novaria.html"><img class="sifir" src="html all/tanklar/13.jpg" alt="tigreal" data-variant="tigreal"></a>
+        <a href="html all/novaria.html"><img class="sifir" src="html all/tanklar/14.jpg" alt="baxia" data-variant="baxia"></a>
+        <a href="html all/novaria.html"><img class="sifir" src="html all/tanklar/15.jpg" alt="haylos" data-variant="haylos"></a>
+        <a href="html all/novaria.html"><img class="sifir" src="html all/tanklar/16.jpg" alt="barath" data-variant="barath"></a>
+        
+    
+    
+    
+    
+    
+    
+    
+    
+    </div>
+
+    <script>
+        const search = document.getElementById("search");
+        const items = document.querySelectorAll(".sifir");
+
+        search.addEventListener("input", function() {
+    const term = this.value.toLowerCase();
+    items.forEach(item => {
+        const variant = (item.dataset.variant || "").toLowerCase();
+        if (variant.includes(term)) {
+            item.parentElement.style.display = "block"; // <a> görünür
+        } else {
+            item.parentElement.style.display = "none";  // <a> gizle
+        }
+    });
+});
+
+    let drawerOpen = false;
+
+const menuBtn = document.getElementById("menuBtn");
+const sidebar = document.getElementById("sidebar");
+
+menuBtn.addEventListener("click", function() {
+    drawerOpen = !drawerOpen;           // her tıklamada tersine çevir
+    if(drawerOpen) {
+        sidebar.classList.add("active");  // aç
+    } else {
+        sidebar.classList.remove("active"); // kapa
+    }
+});
+
+    </script>
+
+</body>
+</html>
